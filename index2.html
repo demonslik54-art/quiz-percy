@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Quiz dos 20 Chalés – Acampamento Meio-Sangue</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+body {
+  background: linear-gradient(to bottom, #1e3c2f, #0f1f17);
+  font-family: 'Cinzel', serif;
+  color: #f5f0e6;
+  padding: 20px;
+}
+
+.quiz {
+  max-width: 900px;
+  margin: auto;
+  background: rgba(20, 35, 25, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.7);
+  border: 2px solid #c9a24d;
+}
+
+h1 {
+  text-align: center;
+  color: #f4d58d;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.question {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-left: 4px solid #c9a24d;
+  background: rgba(255,255,255,0.03);
+  border-radius: 8px;
+}
+
+input[type="radio"] {
+  margin-right: 8px;
+  accent-color: #c9a24d;
+}
+
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 15px 30px;
+  font-size: 18px;
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(135deg, #c9a24d, #8b6b2e);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+button:hover {
+  box-shadow: 0 0 15px #c9a24d;
+}
+
+#result {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 22px;
+  color: #f4d58d;
+  padding: 20px;
+  border-top: 2px solid #c9a24d;
+}
+</style>
+</head>
+
+<body>
+<div class="quiz">
+<h1>Quiz dos 20 Chalés</h1>
+
+<form id="quizForm">
+
+<!-- 15 perguntas equilibradas -->
+<div class="question">1. Em um grupo você é:
+<br><input type="radio" name="q1" value="Zeus"> Líder
+<br><input type="radio" name="q1" value="Atena"> Estrategista
+<br><input type="radio" name="q1" value="Ares"> Impulsivo
+<br><input type="radio" name="q1" value="Hera"> Protetor
+</div>
+
+<div class="question">2. O que mais te define?
+<br><input type="radio" name="q2" value="Apolo"> Criatividade
+<br><input type="radio" name="q2" value="Hefesto"> Técnica
+<br><input type="radio" name="q2" value="Hécate"> Mistério
+<br><input type="radio" name="q2" value="Afrodite"> Emoção
+</div>
+
+<div class="question">3. Seu ambiente ideal:
+<br><input type="radio" name="q3" value="Poseidon"> Água
+<br><input type="radio" name="q3" value="Deméter"> Natureza
+<br><input type="radio" name="q3" value="Artemis"> Florestas
+<br><input type="radio" name="q3" value="Héstia"> Lar
+</div>
+
+<div class="question">4. Em desafios você:
+<br><input type="radio" name="q4" value="Nike"> Busca vencer
+<br><input type="radio" name="q4" value="Nêmesis"> Busca justiça
+<br><input type="radio" name="q4" value="Tique"> Confia na sorte
+<br><input type="radio" name="q4" value="Hades"> Persiste
+</div>
+
+<div class="question">5. Seu ponto forte:
+<br><input type="radio" name="q5" value="Hermes"> Agilidade
+<br><input type="radio" name="q5" value="Íris"> Comunicação
+<br><input type="radio" name="q5" value="Hebe"> Juventude
+<br><input type="radio" name="q5" value="Dionísio"> Liberdade
+</div>
+
+<div class="question">6. O que mais te motiva?
+<br><input type="radio" name="q6" value="Nike"> Vitória
+<br><input type="radio" name="q6" value="Héstia"> Harmonia
+<br><input type="radio" name="q6" value="Hades"> Lealdade
+<br><input type="radio" name="q6" value="Apolo"> Reconhecimento
+</div>
+
+<div class="question">7. Seu maior defeito é:
+<br><input type="radio" name="q7" value="Ares"> Impulsividade
+<br><input type="radio" name="q7" value="Atena"> Orgulho
+<br><input type="radio" name="q7" value="Afrodite"> Sensibilidade
+<br><input type="radio" name="q7" value="Hermes"> Inquietação
+</div>
+
+<div class="question">8. Você prefere trabalhar:
+<br><input type="radio" name="q8" value="Hefesto"> Com as mãos
+<br><input type="radio" name="q8" value="Atena"> Com a mente
+<br><input type="radio" name="q8" value="Apolo"> Com arte
+<br><input type="radio" name="q8" value="Deméter"> Com cuidado
+</div>
+
+<div class="question">9. Em um desafio difícil, você:
+<br><input type="radio" name="q9" value="Zeus"> Assume o comando
+<br><input type="radio" name="q9" value="Poseidon"> Improvisa
+<br><input type="radio" name="q9" value="Atena"> Analisa tudo
+<br><input type="radio" name="q9" value="Hades"> Persiste
+</div>
+
+<div class="question">10. Seu tempo livre envolve:
+<br><input type="radio" name="q10" value="Apolo"> Música
+<br><input type="radio" name="q10" value="Artemis"> Natureza
+<br><input type="radio" name="q10" value="Hermes"> Explorar
+<br><input type="radio" name="q10" value="Atena"> Estudar
+</div>
+
+<div class="question">11. Você é mais:
+<br><input type="radio" name="q11" value="Artemis"> Independente
+<br><input type="radio" name="q11" value="Afrodite"> Afetivo
+<br><input type="radio" name="q11" value="Ares"> Competitivo
+<br><input type="radio" name="q11" value="Héstia"> Calmo
+</div>
+
+<div class="question">12. Em grupo, você protege:
+<br><input type="radio" name="q12" value="Hades"> Os esquecidos
+<br><input type="radio" name="q12" value="Zeus"> A ordem
+<br><input type="radio" name="q12" value="Poseidon"> Os próximos
+<br><input type="radio" name="q12" value="Héstia"> Todos
+</div>
+
+<div class="question">13. Você confia mais em:
+<br><input type="radio" name="q13" value="Atena"> Lógica
+<br><input type="radio" name="q13" value="Afrodite"> Emoção
+<br><input type="radio" name="q13" value="Apolo"> Inspiração
+<br><input type="radio" name="q13" value="Ares"> Instinto
+</div>
+
+<div class="question">14. Seu símbolo ideal:
+<br><input type="radio" name="q14" value="Zeus"> Raio
+<br><input type="radio" name="q14" value="Poseidon"> Tridente
+<br><input type="radio" name="q14" value="Hades"> Elmo
+<br><input type="radio" name="q14" value="Apolo"> Sol
+</div>
+
+<div class="question">15. O que mais te define?
+<br><input type="radio" name="q15" value="Héstia"> Cuidado
+<br><input type="radio" name="q15" value="Atena"> Sabedoria
+<br><input type="radio" name="q15" value="Ares"> Coragem
+<br><input type="radio" name="q15" value="Hermes"> Movimento
+</div>
+
+<button type="button" onclick="calculateResult()">Descobrir meu chalé</button>
+</form>
+
+<div id="result"></div>
+</div>
+
+<script>
+const allCabins = [
+ "Zeus","Hera","Poseidon","Deméter","Ares",
+ "Atena","Apolo","Artemis","Hefesto","Afrodite",
+ "Hermes","Dionísio","Hades","Íris","Nêmesis",
+ "Nike","Hebe","Tique","Hécate","Héstia"
+];
+
+function calculateResult(){
+ const form = document.getElementById("quizForm");
+ const data = new FormData(form);
+
+ if(data.keys().length < 15){
+   alert("Responda todas as perguntas!");
+   return;
+ }
+
+ const scores = {};
+ allCabins.forEach(g => scores[g] = 1);
+
+ for(let value of data.values()){
+   scores[value]++;
+ }
+
+ let max = Math.max(...Object.values(scores));
+ let winners = Object.keys(scores).filter(g => scores[g] === max);
+
+ let finalWinner = winners[Math.floor(Math.random()*winners.length)];
+
+ document.getElementById("result").innerHTML =
+ `🏛️ Você pertence ao <strong>Chalé de ${finalWinner}</strong>!`;
+}
+</script>
+
+</body>
+</html>
